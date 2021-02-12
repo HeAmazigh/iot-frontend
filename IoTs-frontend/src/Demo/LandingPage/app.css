@@ -1,0 +1,645 @@
+/*
+ * @Author: ryma.naiatamara 
+ * @Date: 2020-02-12 11:23:59 
+ * @Last Modified time: 2020-02-12 11:51:36
+ * 
+ *  Copyright (c) 2019 Red Alert Labs S.A.S.
+ *  All Rights Reserved.
+ *  This software is the confidential and proprietary information of
+ *  Red Alert Labs S.A.S. (Confidential Information). You shall not
+ *  disclose such Confidential Information and shall use it only in
+ *  accordance with the terms of the license agreement you entered
+ *  into with Red Alert Labs S.A.S.
+ *  RED ALERT LABS S.A.S. MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE
+ *  SUITABILITY OF THE SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING
+ *  BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+ *  FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. RED ALERT LABS S.A.S. SHALL
+ *  NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING,
+ *  MODIFYING OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
+ * 
+ */
+
+/* body css */
+body {
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 14px !important;
+  color: #888 !important;
+  font-weight: 400 !important;
+  background: #f4f7fa !important;
+  position: relative !important;
+}
+
+/* focus form  */
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: rgba(147, 160, 165, 0.418) !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(147, 160, 165, 0.418);
+}
+
+/**     Stepper progress bar surveyjs                   **/
+.sv-root-modern .sv-boolean__switch {
+  background-color: rgb(200, 207, 206) !important;
+}
+.sv-root-modern .sv-boolean__label--disabled {
+  color: rgb(138, 17, 17) !important;
+}
+
+ .sv_progress-buttons__list li.sv_progress-buttons__list-element--passed::before {
+  border-color: rgb(138, 17, 17) !important;
+  background-color: rgb(138, 17, 17) !important;
+}
+.sv_progress-buttons__list li::before {
+  width: 24px;
+  height: 24px;
+  content: "";
+  line-height: 30px;
+  border: 3px solid rgb(217, 141, 141) !important;
+  display: block;
+  margin: 0px auto 10px;
+  border-radius: 50%;
+  box-sizing: content-box;
+  background-color: rgb(217, 141, 141) !important;
+  cursor: pointer;
+}
+
+.sv_progress-buttons__list li.sv_progress-buttons__list-element--passed + li::after {
+  background-color: rgb(217, 141, 141) !important; 
+}
+/**   Stepper progress bar surveyjs                      **/
+
+
+
+/* Table thead th */
+.table thead th {
+  vertical-align: middle !important;
+  border-bottom: 2px solid #dee2e6;
+}
+
+/* Begin antd css  */
+.ant-tabs {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #888 !important;
+  font-size: 14px;
+  font-weight: 700 !important;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  -webkit-font-feature-settings: 'tnum';
+  font-feature-settings: 'tnum', "tnum";
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+.ant-tabs-tab-btn:focus, .ant-tabs-tab-remove:focus, .ant-tabs-tab-btn:active, .ant-tabs-tab-remove:active {
+  color: #922222 !important;
+}
+
+.ant-tabs-left > .ant-tabs-nav .ant-tabs-tab-active, .ant-tabs-right > .ant-tabs-nav .ant-tabs-tab-active, .ant-tabs-left > div > .ant-tabs-nav .ant-tabs-tab-active, .ant-tabs-right > div > .ant-tabs-nav .ant-tabs-tab-active{
+  margin: 0 0 16px 0;
+  padding: 8px 24px;
+  text-align: center;
+  background-color: #B12222;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+  
+}
+.ant-tabs-tab:hover {
+  color: #B12222 !important;
+}
+.ant-tabs-left > .ant-tabs-content-holder, .ant-tabs-left > div > .ant-tabs-content-holder {
+  margin-left: -1px !important;
+  border-left: none !important;
+}
+.ant-tabs-ink-bar {
+  position: absolute;
+  background: transparent !important;
+  pointer-events: none;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: white !important;
+  font-weight: 700 !important;
+  
+}
+/* End antd CSS */
+
+/* Begin modern surveyjs */
+
+.btn-primary:focus {
+  color: #fff;
+  background-color: #b12222 !important;
+  border-color: #b12222;
+}
+.load-more{
+  display: block;
+  border: 0;
+  margin: 1em auto;
+  padding: .75em 1em;
+  font-size: 1em;
+  background-color: #c34d41;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-color:  #c34d41;
+  cursor: pointer;
+  
+}
+
+.load-more:focus{
+  outline: 1px solid rgba(255, 255, 255, .5)
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(248, 34, 34, 0.438) !important;
+}
+.ant-drawer {
+  position: fixed;
+  z-index: 1029 !important;
+}
+
+.sv-root-modern .sv-item__control:focus + .sv-item__decorator {
+  border-color:  rgb(179, 26, 26) !important;
+}
+.sv-root-modern .sv-imagepicker__item--checked .sv-imagepicker__image {
+  background-color: rgb(200, 207, 206) !important;
+  border-color: rgb(200, 207, 206) !important;
+}
+
+.sv-root-modern .sv-footer__prev-btn {
+  background-color: rgb(179, 26, 26) !important;
+}
+.sv-root-modern .sv-footer__next-btn {
+  background-color: rgb(179, 26, 26) !important;
+}
+.sv-root-modern .sv-checkbox--checked .sv-checkbox__svg {
+  background-color: rgb(179, 26, 26) !important;
+  fill: rgb(244, 244, 244);
+}
+
+.sv-root-modern ::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+  background-color: rgb(244,247,250) !important;
+}
+
+.sv-root-modern ::-webkit-scrollbar-thumb {
+  background:#748892  !important;
+}
+.sv-root-modern .sv-container-modern {
+  color: rgb(113, 116, 117) !important;
+}
+
+.sv-table {
+  width: 100%;
+  background-color: rgb(244,247,250) !important;
+  padding: 0.9375em 1.875em 1.5625em;
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+
+.sv-container-modern {
+  color: #404040;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.sv-root-modern .sv-radio--checked .sv-radio__svg {
+  border-color: #748892 !important ;
+  fill: #748892 !important;
+}
+.sv-root-modern .sv-footer__complete-btn {
+  background-color: #748892 !important;
+}
+
+.sv-root-modern .sv-paneldynamic__add-btn {
+  
+  background-color: #748892 !important;
+}
+.sv-root-modern .sv-paneldynamic__remove-btn {
+  margin-top: 30px !important;
+  background-color: rgb(188, 202, 207) !important;
+}
+
+.sv-root-modern .sv-progress__bar {
+  background-color:  #748892 !important;
+}
+
+.sv-root-modern .sv-completedpage {
+  color: #748892 !important;
+  background-color: transparent !important;
+}
+
+.sv-root-modern .sv-question__title--answer {
+  background-color: rgba(177, 195, 204, 0.2) !important;
+}
+
+.sv-matrix__cell {
+  min-width: 5em !important;
+  text-align: center;
+}
+.sv_main .sv_p_root > .sv_row {
+  border-bottom: none !important;
+}
+.sv_main .sv_body {
+  background-color: white;
+  border-top: none !important;
+}
+
+.sv_main input[type="button"], .sv_main button {
+  color: white;
+  background-color: #748892 !important;
+}
+
+.sv_main .sv_select_wrapper:before {
+  background-color: #748892 !important;
+}
+
+.sv_main .sv_container .sv_body .sv_nav {
+  padding: 1em 0;
+  min-height: 2em;
+}
+
+.sv_main .sv_container .sv_body .sv_p_root .sv_q .sv_panel_dynamic .sv-paneldynamic__progress-container {
+  position: relative;
+  display: inline-block;
+  width: calc(100% - 250px);
+  margin-left: 40px;
+  margin-top: 10px;
+  background-color: #748892 !important;
+}
+/* End modern surveyjs */
+
+
+
+.list-group-item.active {
+  z-index: 2;
+  color: #fff;
+  background-color:#748892;
+  border-color: #748892;
+}
+
+.rstm-tree-item--active {
+  color: white;
+  background: #748892;
+  border-bottom: none;
+}
+
+
+.table {
+  color: #748892 !important;
+  /* font-size: 16px; */
+}
+
+.table thead th {
+  border-bottom: 1px solid #eaeaea;
+  /* background-color: #748892 ; */
+  background-color:#e7ecef;
+}
+
+th {
+  text-align: center !important;
+}
+tbody th {
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  left: 0;
+  background: #fff;
+  border-right: 1px solid #ccc;
+}
+.header-class{
+  background:#748892;
+  color: dimgray;
+  font-size: 15px;
+  font-weight: bold;
+}
+/* table */
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #748892 !important;
+  background-color: #fff;
+  border: 1px solid #748892;
+}
+/* Page Pagination */
+
+ul.pagination li.page-item.active a.page-link {
+  color: #445565 !important;
+  background-color: #748892 !important;
+  border-color: #ced4da !important;
+  
+}
+
+
+
+/* Page Pagination */
+/************** Pagination**********************/
+
+.current-page {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.country-card-container {
+  height: 60px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.country-name {
+  font-size: 0.9rem;
+}
+
+.country-region {
+  font-size: 0.7rem;
+}
+
+.country-page,
+.country-name,
+.country-region {
+  line-height: 1;
+}
+
+ul.pagination {
+  margin-top: 0;
+  margin-bottom: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+ul.pagination li.page-item.active a.page-link {
+  color: #445565 !important;
+  background-color: #e3e7eb !important;
+  border-color: #ced4da !important;
+}
+ul.pagination a.page-link {
+  padding: 0.75rem 1rem;
+  min-width: 3.5rem;
+  text-align: center;
+  box-shadow: none !important;
+  border-color: #ced4da !important;
+  color: #6b88a4;
+  font-weight: 900;
+  font-size: 1rem;
+}
+ul.pagination a.page-link:hover {
+  background-color: #f4f4f4;
+}
+
+/************************* Pagination*************************/
+
+/* Begin Card CSS */
+.card
+.card-border-color{
+  border:1px;
+  border-color: #445565 !important;
+}
+
+.modal-90w{
+  width:70%;
+max-width: none !important;
+}
+
+.modal-80w{
+  width:60%;
+max-width: none !important;
+}
+.card {
+  font-size: 1em;
+  overflow: hidden;
+  padding: 0;
+  border: none;
+ }  
+ 
+.card-title {
+  font-size: 1.28571429em;
+  font-weight: 700;
+  color:rgb(155, 13, 13);
+  line-height: 1.2857em;
+}
+
+.card-text {
+  clear: both;
+  margin-top: 0.5em;
+  color: rgba(0, 0, 0, 0.68);
+}
+.card-inverse .btn {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 1em;
+}
+.whenhovered {
+  position: absolute;
+  top: -100%;
+  right: 0;
+  background: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
+  padding: 2%;
+  text-align: center;
+  color: #fff !important;
+  z-index: 2;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.card:hover .whenhovered {
+  top: 0%;
+  background: rgba(96, 117, 148, 0.75);
+}
+
+/*End Card CSS */
+
+/* Page header & scroll pages css  */
+.docs-page-header {
+  font-weight: 400;
+  overflow: hidden !important;
+  font-size: 27px;
+  margin: 0;
+  padding: 15px 50px;
+  line-height:40px;
+  height: 70px;
+}
+.docs-page-header.bg-dark {
+    background-color: rgb(63, 77, 103) !important;
+}
+
+.docs-header-path {
+  opacity: 1;
+}
+.docs-wrapper {
+  min-height: calc(100vh - 70px);
+  position: relative;
+}
+
+.docs-inner {
+  padding: 40px;
+}
+
+.docs-sections {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  bottom: 0;
+  overflow: hidden !important;
+}
+
+.docs-sections-inner {
+  padding-top: 32px;
+  padding-left: 32px;
+  padding-right:32px;
+  margin: 0;
+}
+
+.docs-sections-inner>li:first-child {
+  padding-top: 0 !important;
+}
+
+.docs-sections-inner li {
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+  font-size:14px;
+}
+
+.docs-sections,
+.docs-sections a,
+.docs-sections a:focus,
+.docs-sections a:active {
+  color: #6c757d;
+  line-height: 1.3;
+    padding: 0;
+}
+
+.docs-sections a:hover {
+  color: #333;
+    position:relative;
+}
+
+.docs-sections a.active {
+  color: #333;
+  font-weight: bold;
+    position:relative;
+}
+.docs-sections a.active:before , .docs-sections a:hover:before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #000;
+    border-radius: 50%;
+    top: 8px;
+    left: -15px;
+}
+
+.docs-page-header,
+.docs-wrapper {
+  min-width: 1200px;
+}
+
+.docs-sections {
+  width: 230px;
+    background: rgba(63, 77, 103, 0.05);
+}
+
+.docs-wrapper {
+  padding-left: 230px;
+}
+
+h2.docs-header {
+  margin-bottom:32px;
+  font-size: 24px;
+  position: relative;
+}
+
+h2.docs-header~h2.docs-header {
+  margin-top: 50px;
+}
+.datepicker>.datepicker-days {
+    display: block;
+}
+
+ol.linenums {
+    margin: 0 0 0 -8px;
+}
+/* Page header & scroll pages css  */
+
+/************************** Dropdown css**********/
+.pcoded-header .dropdown.show:before {
+  content: "\63";
+  font-family: pct;
+  position: absolute;
+  left: -5px;
+  top: 60px;
+  z-index: 1001;
+  font-size: 40px;
+  line-height: 0;
+  color: #fff;
+  text-shadow: 0 -2px 2px rgba(65,76,78,.12);
+}
+
+
+/******************* end ***********************/
+
+
+/* Begin a primary hover CSS */
+
+a {
+  color: #b7bec7 !important ;
+  text-decoration: none;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff !important;
+  background: #b12222;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+a:hover{
+  color: darkred !important;
+  text-decoration: none;
+  background-color: transparent;
+
+}
+   
+  .profile-inline {
+    position: relative;
+    top: 0;
+    display: inline-block;
+  }
+  
+  .profile-inline ~ .card-title {
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: top;
+  }
+  
+  .text-bold {
+    font-weight: 700;
+  }
+  
+  .meta {
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .meta a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .meta a:hover {
+    color: rgba(0, 0, 0, 0.87);
+  }
+  
+ /* End a  primary hover css */
