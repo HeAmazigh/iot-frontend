@@ -13,6 +13,6 @@ POST Http://localhost:5000/api/users/
 Content-Type: application/json
 
 {
-    "email": "amazighh@gmail.com",
+    "username": "aighh@gmail.com",
     "password": "amazigh1991"
 }

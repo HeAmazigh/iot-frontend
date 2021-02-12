@@ -15,28 +15,23 @@ const singup = async (req, res, next) => {
     }
 
     const {firstname, lastname, username, password, email} = req.body;
+    console.log(username, password, email);
     let existingUser;
 
     try {
-        existingUser = await User.findOne({
-            where: {
-                [Op.or]: [
-                    {email: email},
-                    {username: username}
-                ]
-            }});
+        existingUser = await User.findOne({where: {username: username}});
     } catch (error) {
-        return next(new HttpError('Singup field, plase try again lllllllater! ', 422));
+        return next(new HttpError('Singup field, plase try again later! ', 422));
     }
 
     if (existingUser) {
-        return next(new HttpError('E-mail address already exist!', 422));
+        return next(new HttpError('E-mail address or username already exist!', 422));
     }
 
     let hashPassword;
     try {
         hashPassword = await bcrypt.hash(password, 10);
-        console.log('passssssssswoooooooord ',hashPassword);
+        //console.log('passssssssswoooooooord ',hashPassword);
     } catch (error) {
         return next(new HttpError('Could not create user, Please try again! ', 500));
     }
@@ -44,14 +39,13 @@ const singup = async (req, res, next) => {
     let createUser;
     try {
         createUser = await User.create({
-            firstname,
-            lastname,
+            firstname: 'firstname',
+            lastname: 'lastname',
             username,
             password: hashPassword,
             email
         });
     } catch (error) {
-        console.log('errorrrrr ', error)
         return next(new HttpError('Singin up field, plase try again laaaaaaater! ', 500));
     }
 
@@ -59,7 +53,7 @@ const singup = async (req, res, next) => {
     try {
         token = jwt.sign({
             userId: createUser.id,
-            email: createUser.email
+            username: createUser.username
         },
         process.env.JWT_KEY ,
         {
@@ -68,23 +62,24 @@ const singup = async (req, res, next) => {
     } catch (error) {
         return next(new HttpError('Singin up field, plase try again kater! ', 500));
     }
-    res.status(201).json({userId: createUser.id, email: createUser.email, token: token});
+    res.status(201).json({userId: createUser.id, username: createUser.username, token: token});
 }
 
 const login = async (req, res, next) => {
-    const {email, password} = req.body;
+    const {username, password} = req.body;
+    console.log(username, password);
 
     let existingUser;
     try {
-        existingUser = await User.findOne({where: {email: email}});
+        existingUser = await User.findOne({where: {username: username}});
     } catch (error) {
-        return next(new HttpError('Login field, plase try again ater! ', 500));
+        return next(new HttpError('Login field, plase try again later! ', 500));
     }
-
+    
     if (!existingUser) {
         return next(new HttpError('Credentials not match', 403));
     }
-
+    
     let isValidPassword = false;
     try {
         isValidPassword = await bcrypt.compare(password, existingUser.password); 
@@ -92,22 +87,23 @@ const login = async (req, res, next) => {
         return next(new HttpError('Could not log you in! Please try again', 500));
     }
     if (!isValidPassword) {
+        //console.log(existingUser.username);
         return next(new HttpError('Credentials not match', 403));
     }
     let token;
     try {
         token = jwt.sign({
             userId: existingUser.id,
-            email: existingUser.email
+            username: existingUser.username
         },
         process.env.JWT_KEY ,
         {
             expiresIn: '1h'
         })
     } catch (error) {
-        return next(new HttpError('Singin up field, plase try again kater! ', 500));
+        return next(new HttpError('Singin up field, plase try again later! ', 500));
     }
-    res.status(201).json({userId: existingUser.id, email: existingUser.email, token: token});
+    res.status(201).json({userId: existingUser.id, username: existingUser.username, token: token});
 }
 
 

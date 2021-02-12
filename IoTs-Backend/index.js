@@ -26,6 +26,16 @@ app.use((req, res, next) => {
     throw error;
 });
 
+app.use((error, req, res, next)=> {
+    if (req.headerSend) {
+        return next(error); 
+    }
+
+    res.status(error.code || 500 ).json({
+        message: error.message || 'An unknown error accorred!',
+    })
+})
+
 try {
     sequelize.authenticate();
     console.log('Connection has been established successfully.');
